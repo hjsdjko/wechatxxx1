@@ -1,0 +1,44 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">课程分类：</view>
+<view class="detail-item-text">{{detailList.kechengfenlei}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+
+
+
+</view>
+
+</view>
+</view>

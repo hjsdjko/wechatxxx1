@@ -1,0 +1,24 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+<view class="item-box"  >
+    <view class="item-label">评论内容</view>
+
+    <textarea model:value="{{content}}" placeholder="评论内容"     data-info="{{content}}" maxlength="300" id="content"></textarea>
+</view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

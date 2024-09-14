@@ -1,0 +1,149 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">课程名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.kechengmingcheng==true}}"  placeholder="课程名称" model:value="{{kechengmingcheng}}" />
+    </view>
+
+<view class="item-box"    bindtap="uploadkechengfengmian">
+    <view   class="item-label">课程封面</view>
+    <image  src="{{kechengfengmianPath}}" mode="aspectFill"  class="item-img"></image>
+</view>
+<view class="item-box">
+    <view class="item-label" >课程分类</view>
+    <picker   class="down-item-picker"     bindchange="kechengfenleiChange" value="{{kechengfenleiIndex}}"  range="{{kechengfenleiList}}">
+                <view class="down-item-picker-text">
+                    {{kechengfenleiIndex||kechengfenleiIndex==0?kechengfenleiList[kechengfenleiIndex]:"请选择课程分类"}}
+                </view>
+    </picker>
+</view>
+    <view class="item-box"  >
+        <view class="item-label">上课时间</view>
+        <view class="down-item-picker"  bindtap="onshangkeshijianTap">
+            <view class="down-item-picker-text">         {{shangkeshijian}}</view>
+        </view>
+    </view>
+    <com-date isShowPicker="{{showshangkeshijian}}" bind:dateHandler="shangkeshijianTap"></com-date>
+    <view class="item-box">
+        <view class="item-label">上课地点</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.shangkedidian==true}}"  placeholder="上课地点" model:value="{{shangkedidian}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">课程价格</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.kechengjiage==true}}"  placeholder="课程价格" model:value="{{kechengjiage}}" />
+    </view>
+
+<view class="item-box">
+    <view class="item-label" >教练账号</view>
+    <picker   class="down-item-picker"     bindchange="jiaolianzhanghaoChange" value="{{jiaolianzhanghaoIndex}}"  range="{{jiaolianzhanghaoList}}">
+                <view class="down-item-picker-text">
+                    {{jiaolianzhanghaoIndex||jiaolianzhanghaoIndex==0?jiaolianzhanghaoList[jiaolianzhanghaoIndex]:"请选择教练账号"}}
+                </view>
+    </picker>
+</view>
+    <view class="item-box">
+        <!-- 随 -->
+
+        <view class="item-label">教练姓名</view>
+        <input  class="item-input" type="text"   placeholder="教练姓名" model:value="{{jiaolianxingming}}" />
+    </view>
+    <view class="item-box"  >
+        <view class="item-label">预约时间</view>
+        <view class="down-item-picker"  bindtap="onyuyueshijianTap">
+            <view class="down-item-picker-text">         {{yuyueshijian}}</view>
+        </view>
+    </view>
+    <com-date isShowPicker="{{showyuyueshijian}}" bind:dateHandler="yuyueshijianTap"></com-date>
+    <view class="item-box">
+        <view class="item-label">用户账号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yonghuzhanghao==true}}"  placeholder="用户账号" model:value="{{yonghuzhanghao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">用户姓名</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.yonghuxingming==true}}"  placeholder="用户姓名" model:value="{{yonghuxingming}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">手机号码</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.shoujihaoma==true}}"  placeholder="手机号码" model:value="{{shoujihaoma}}" />
+    </view>
+
+    <view class="item-box"  >
+        <view class="item-label">取消时间</view>
+        <view class="down-item-picker"  bindtap="onquxiaoshijianTap">
+            <view class="down-item-picker-text">         {{quxiaoshijian}}</view>
+        </view>
+    </view>
+    <com-date isShowPicker="{{showquxiaoshijian}}" bind:dateHandler="quxiaoshijianTap"></com-date>
+    <view class="item-box">
+        <view class="item-label">取消原因</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.quxiaoyuanyin==true}}"  placeholder="取消原因" model:value="{{quxiaoyuanyin}}" />
+    </view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

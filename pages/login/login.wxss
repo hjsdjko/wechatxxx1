@@ -1,0 +1,232 @@
+/* pages/login/login.wxss */
+/* 驼峰转化函数 */
+
+.login-container{
+min-height
+:100vh;
+padding
+:224rpx 44rpx 244rpx 44rpx;
+background
+:url(http://clfile.zggen.cn/20231027/1c74fe0f859b421da2ff00db828f3937.jpg) no-repeat center top / 100%,#6185fd;
+height
+:100%;
+display:flex;
+justify-content: center;
+}
+.content{
+width: calc(100vw - 18vw)!important;
+overflow: hidden;
+padding
+:40rpx 48rpx 40rpx 48rpx;
+box-shadow
+:0px 0px 0px #dddddd;
+margin
+:0 0 244rpx 0;
+border-radius
+:24rpx;
+background
+:#ffffff;
+display
+:block;
+width
+:100%;
+position
+:relative;
+height
+:auto;
+}
+.avatar{
+width
+:160rpx;
+margin
+:0 auto 40rpx;
+border-radius
+:100%;
+object-fit
+:cover;
+display
+:block;
+height
+:160rpx;
+}
+.box{
+width
+:100%;
+margin
+:0 0 24rpx 0;
+height
+:auto;
+}
+input{
+width:90%!important;
+border
+:2rpx solid #eeeeee;
+padding
+:0px 24rpx 0 24rpx;
+margin
+:0 0 0 0;
+color
+:#666666;
+border-radius
+:40rpx;
+background
+:#ffffff;
+width
+:100%;
+font-size
+:28rpx;
+height
+:80rpx;
+}
+
+.section {
+padding:0!important;
+border
+:2rpx solid #eeeeee;
+width
+:100%;
+padding
+:0 20rpx;
+margin
+:0 0 24rpx 0;
+border-radius
+:40rpx;
+height
+:auto;
+}
+.picker-text{
+width
+:100%;
+line-height
+:80rpx;
+font-size
+:28rpx;
+color
+:#666666;
+max-width: calc(100% - 48rpx)!important;
+padding: 0 24rpx 0 24rpx;
+}
+.login-btn{
+border
+:0;
+padding
+:0 0 0 0;
+margin
+:0 0 24rpx 0;
+color
+:#ffffff;
+border-radius
+:60rpx;
+background
+:url(http://clfile.zggen.cn/20231027/6e8b0d771019408d8e99fb9a88018f81.png) no-repeat center top / 100%;
+width
+:100%;
+line-height
+:80rpx;
+font-size
+:32rpx;
+height
+:80rpx;
+}
+.face-btn{
+border
+:0;
+padding
+:0 0 0 0;
+margin
+:0 0 24rpx 0;
+color
+:#ffffff;
+border-radius
+:60rpx;
+background
+:url(http://clfile.zggen.cn/20231027/6e8b0d771019408d8e99fb9a88018f81.png) no-repeat center top / 100%;
+width
+:100%;
+line-height
+:80rpx;
+font-size
+:32rpx;
+height
+:80rpx;
+text-align: center;
+}
+.box2{
+width
+:100%;
+margin
+:0 0 24rpx 0;
+flex-wrap
+:wrap;
+display
+:flex;
+height
+:auto;
+}
+.forgot-password,.face-recognition{
+color
+:#999999;
+padding
+:0 8rpx 0 8rpx;
+font-size
+:28rpx;
+}
+.register-btn{
+color
+:#999999;
+padding
+:0 8rpx 0 8rpx;
+font-size
+:28rpx;
+}
+
+.code-box{
+width
+:100%;
+margin
+:0 0 24rpx 0;
+flex-wrap
+:wrap;
+justify-content
+:space-between;
+display
+:flex;
+height
+:auto;
+}
+.code-input{
+border
+:2rpx solid #eeeeee;
+padding
+:0 24rpx 0 24rpx;
+margin
+:0 0 0 0;
+color
+:#666666;
+border-radius
+:40rpx;
+background
+:#ffffff;
+width
+:calc(100% - 188rpx);
+font-size
+:28rpx;
+height
+:80rpx;
+width: calc(100% - 258rpx)!important;
+}
+
+.img-code {
+border: 2rpx solid #eeeeee;
+border-radius: 60rpx;
+height: 88rpx;
+width: 30%;
+display: flex;
+justify-content: center;
+}
+
+#captchaCanvas {
+left: 10rpx;
+}
+
+

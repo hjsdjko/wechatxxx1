@@ -1,0 +1,24 @@
+<view class="forumCenter-container">
+    <view class="search">
+        <input class="search-input" model:value="{{name}}" type="text" id="" placeholder="标题">
+        <text class="iconfont icon-sousuo4 icons"></text>
+        </input>
+        <view class="searchBtn" bind:tap="searhandler">搜索</view>
+    </view>
+
+    <view class="content">
+        <view class="title">新闻资讯</view>
+        <view class="list">
+            <view class="list-item" bindtap="todetail" data-id="{{item.id}}" wx:for="{{currentList}}" wx:key="{{index}}">
+                <image class="left" src="{{baseURL+item.picture}}" mode="aspectFill" />
+                <view class="right">
+                    <view>{{item.title}}</view>
+                    <view class="publishdate">发布时间：{{item.addtime}}</view>
+                </view>
+            </view>
+            <view class="nodata">
+                ~没有更多了~
+            </view>
+        </view>
+    </view>
+</view>

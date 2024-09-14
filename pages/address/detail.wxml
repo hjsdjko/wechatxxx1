@@ -1,0 +1,51 @@
+<view class="address-container">
+    <view class="content">
+        <view class="name">
+            <view>收货人: </view>
+            <input type="text" placeholder="请输入姓名" model:value="{{name}}" />
+        </view>
+        <!-- 广东省广州市番禺 -->
+        <view class="code">
+            <view>联系电话: </view>
+            <input type="text" placeholder="请输入号码" model:value="{{phone}}" />
+        </view>
+        <com-popup id="bottomFrame" className="center-popup">
+            <input class="search" type="text" value='{{addressName}}' placeholder='请输入关键字' bindinput="nameInp"></input>
+            <view class="list" wx:if="{{listShow}}">
+                <view class="list-item" wx:for="{{searchList}}" wx:key="index">
+                    <view class='title' data-info="{{item.district+item.address}}" bind:tap="selAddressTap">{{item.district}}
+                        {{item.address}}</view>
+                </view>
+            </view>
+            <view wx:if="{{mapShow}}">
+                <map class="map-show" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" />
+                <view class="operate">
+                    <button class="cancel" bind:tap="mapCancel"> 取消</button>
+                    <button class="cofrim" bind:tap="mapConfirm">确认</button>
+                </view>
+            </view>
+
+        </com-popup>
+        <!-- <view bind:tap="getWeatherTap">
+            天气
+        </view> -->
+        <view class="option-address">
+            <view>选择地址: </view>
+            <input style="padding: 0 15rpx;flex: 1;" type="text" placeholder="请输入地址" model:value="{{addressName}}" />
+        </view>
+        <view class="default-btn">
+            <view>默认</view>
+            地址：
+            <view class="page__bd">
+                <view class="section section_gap">
+                    <view class="body-view">
+                        <switch checked="{{isdefault}}" bindchange="switch1Change" />
+                    </view>
+                </view>
+                <view class="section section_gap">
+                </view>
+            </view>
+        </view>
+        <button class="save" bind:tap="saveTap">保存</button>
+    </view>
+</view>

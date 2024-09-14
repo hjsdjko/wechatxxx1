@@ -1,0 +1,98 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/login",
+    "pages/forget/forget",
+  "pages/yonghu/register",
+
+    "pages/pay-confirm/pay-confirm",
+    "pages/user-info/user-info",
+
+
+
+    "pages/reply/reply",
+
+
+    "component/dateTimePicker/dateTime",
+    "component/com-date/com-date",
+    "component/com-editor/com-editor",
+    "component/edit-and-add/edit-and-add",
+    "component/comment-item/comment-item",
+    "component/com-popup/com-popup",
+    "component/com-video/com-video",
+    "component/com-manySel/com-manySel",
+    "component/tree-menu/tree-menu",
+  "pages/news/detail",
+  "pages/news/list",
+   "pages/yonghu/detail",
+    "pages/yonghu/update-and-add",
+    "pages/yonghu/list",
+   "pages/jiaolian/detail",
+    "pages/jiaolian/update-and-add",
+    "pages/jiaolian/list",
+   "pages/kechengfenlei/detail",
+    "pages/kechengfenlei/update-and-add",
+    "pages/kechengfenlei/list",
+   "pages/kechengxinxi/detail",
+    "pages/kechengxinxi/update-and-add",
+    "pages/kechengxinxi/list",
+  "pages/storeup/list",
+   "pages/kechengyuyue/detail",
+    "pages/kechengyuyue/update-and-add",
+    "pages/kechengyuyue/list",
+   "pages/yujiaqicai/detail",
+    "pages/yujiaqicai/update-and-add",
+    "pages/yujiaqicai/list",
+   "pages/yuyuequxiao/detail",
+    "pages/yuyuequxiao/update-and-add",
+    "pages/yuyuequxiao/list",
+   "pages/discusskechengxinxi/detail",
+    "pages/discusskechengxinxi/update-and-add",
+    "pages/discusskechengxinxi/list",
+    "pages/addcomment/addcomment",
+    "pages/center/center"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+
+  "tabBar": {
+    "selectedColor": "#33a3dc",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "/static/index.png",
+        "selectedIconPath": "/static/index1.png",
+        "text": "首页"
+      },
+  {
+  "pagePath": "pages/kechengxinxi/list",
+    "iconPath": "/static/tabs/2/icon1.png",
+    "selectedIconPath": "/static/tabs/2/icon1_act.png",
+      "text": "课程信息"
+  },
+  {
+  "pagePath": "pages/yujiaqicai/list",
+    "iconPath": "/static/tabs/2/icon2.png",
+    "selectedIconPath": "/static/tabs/2/icon2_act.png",
+      "text": "瑜伽器材"
+  },
+      {
+        "pagePath": "pages/center/center",
+        "iconPath": "static/tabs/2/mine.png",
+        "selectedIconPath": "static/tabs/2/mine1.png",
+        "text": "我的"
+      }
+
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

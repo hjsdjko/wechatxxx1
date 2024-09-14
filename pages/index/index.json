@@ -1,0 +1,10 @@
+{
+
+  "usingComponents": {
+    "com-popup": "/component/com-popup/com-popup"
+  },
+
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor":"#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

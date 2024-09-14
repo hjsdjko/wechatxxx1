@@ -1,0 +1,36 @@
+<view class="forgot-container">
+    <view class="forgot-content">
+            <view wx:if="{{usernamShow}}">
+                <view class="box">
+                    <input type="text" placeholder="请输入账号" model:value="{{username}}" />
+                </view>
+                <view class="box">
+                <picker bindchange="bindPickerChange" value="{{loginType}}" range="{{selectType}}">
+                    <input type="text"  disabled="true" model:value="{{selectType[loginType]}}" />
+                </picker>
+                </view>
+                <button bindtap="next" class="next-btn">下一步</button>
+            </view>
+            <view wx:if="{{secretShow}}">
+                <view class="box">
+                    <input type="text"  disabled="true" model:value="{{pquestion}}" />
+                </view>
+                <view class="box">
+                    <input type="text" model:value="{{Inputpanswer}}" placeholder="密保答案" />
+                </view>
+                <button bindtap="comfirm" class="next-btn">确定</button>
+            </view>
+            <view wx:if="{{reviseShow}}">
+                <view class="box">
+                    <input type="password" model:value="{{password}}" placeholder="密码" />
+                </view>
+                <view class="box">
+                    <input type="password" placeholder="确认密码" model:value="{{comfirmPassword}}" />
+                </view>
+                <button bindtap="updatePassword" class="next-btn">修改密码</button>
+            </view>
+
+
+
+    </view>
+</view>

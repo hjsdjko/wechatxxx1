@@ -1,0 +1,6 @@
+<view class="newsDetail-container">
+    <view class="title">{{articleList.chaptertitle}}</view>
+    <view class="article-content">
+        <rich-text nodes="{{articleList.content}}" style="   letter-spacing: 2px; line-height: 50rpx; width: 96vw;" />
+    </view>
+</view>

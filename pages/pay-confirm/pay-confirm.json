@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+  },
+  "navigationBarTitleText": "${comments}",
+  "navigationBarBackgroundColor":"#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

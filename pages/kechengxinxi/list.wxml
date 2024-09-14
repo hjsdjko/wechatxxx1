@@ -1,0 +1,92 @@
+<view class="goodsClassify-container ">
+
+    <view class="content">
+        <view class="list-box">
+
+<view class="search">
+
+<view class="search-inp-box">
+<text class="iconfont icon-sousuo1"></text>
+<input class="search-input" model:value="{{name}}" type="text" id=""   placeholder="课程名称" />
+</view>
+<view class="searchBtn"  bind:tap="searhandler"  >搜索</view>
+
+</view>
+<button class="category-screen" bind:tap="screenBoxShow">筛选</button>
+
+<!-- 筛选盒子 -->
+<view class="info-right" wx:if="{{popopShow}}">
+
+<view class="screen-input-box">
+<view class="screen-input-label">教练姓名</view>
+<input class="screen-intervalInput-item" placeholder="请输入教练姓名"  model:value="{{jiaolianxingming}}" />
+</view>
+
+
+<view class="screen-btn-box">
+<button class="screen-btn-reset" bindtap="screenReset">重置</button>
+<button class="screen-btn-confirm" bindtap="search">确定</button>
+</view>
+</view>
+
+
+            <!-- 列表ok -->
+<view class="categoryFlag-box">
+    <!-- 样式1,2,3ok -->
+<scroll-view scroll-x="true" class="silder">
+<view class="tab {{activeIndex == index ? 'active' : ''}}" wx:key="{{index}}" wx:for="{{silderList}}" bindtap="handleTabClick" data-index="{{index}}" data-kechengfenlei="{{item.kechengfenlei}}">{{item.kechengfenlei}}</view>
+</scroll-view>
+
+<view class="goodsList-box">
+    <!-- 样式1,2ok -->
+<view class="goods-item"  bind:tap="detailBtn" data-item="{{item}}"   wx:for="{{goodsListData}}">
+<image class="goods-img" bind:tap="detailBtn" data-item="{{item}}"  src="{{baseURL+item.kechengfengmian}}" mode="aspectFill" />
+    <view class="goods-title" bind:tap="detailBtn"  data-tableName="kechengxinxi"  data-id="{{item.id}}">
+{{item.kechengmingcheng}}
+    </view>
+    <view class="goods-title" bind:tap="detailBtn"  data-tableName="kechengxinxi"  data-id="{{item.id}}">
+上课时间:{{item.addtime}}
+    </view>
+    <view class="goods-title" bind:tap="detailBtn"  data-tableName="kechengxinxi"  data-id="{{item.id}}">
+教练姓名:{{item.jiaolianxingming}}
+    </view>
+
+
+<view class="operate-box">
+<view class="edit-box" wx:if="{{editAuth}}">
+<text   class="iconfont icon-xiugai2 edit-icons"></text>
+<text bind:tap="editBtn" data-id="{{item.id}}" class="edit-text">修改</text>
+</view>
+<view wx:if="{{delAuth}}" class="delete-box" catchtap="deletetap">
+<text   class="iconfont icon-shanchu4 del-icons"></text>
+<text data-id="{{item.id}}" bind:tap="deleteBtn" class="del-text">删除</text>
+</view>
+</view>
+</view>
+    <!-- 样式3ok -->
+
+    <!-- 样式5ok -->
+
+    </view>
+
+
+
+
+    <button  class="add-btn" wx:if="{{addAuth}}" bind:tap="addTap">新增</button>
+
+
+
+
+
+
+
+        </view>
+
+
+            <!-- 新闻 -->
+
+
+
+    </view>
+</view>
+</view>

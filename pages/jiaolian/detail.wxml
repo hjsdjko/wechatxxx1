@@ -1,0 +1,84 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+
+
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">教练账号：</view>
+<view class="detail-item-text">{{detailList.jiaolianzhanghao}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">教练密码：</view>
+<view class="detail-item-text">{{detailList.jiaolianmima}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">教练姓名：</view>
+<view class="detail-item-text">{{detailList.jiaolianxingming}}</view>
+</view>
+
+
+<view class="detail-detail-img-box">
+<view class="detail-item-label">照片：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.zhaopian}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">性别：</view>
+<view class="detail-item-text">{{detailList.xingbie}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">联系电话：</view>
+<view class="detail-item-text">{{detailList.lianxidianhua}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">身份证号：</view>
+<view class="detail-item-text">{{detailList.shenfenzhenghao}}</view>
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+
+
+
+
+</view>
+
+</view>
+</view>

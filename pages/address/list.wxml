@@ -1,0 +1,23 @@
+<view class="address-container">
+    <view class="content">
+        <view wx:if="{{addressList.length>0}}" class="address" wx:for="{{addressList}}" wx:key="index" data-item="{{item}}">
+            <view>{{item.name}}{{item.phone}} </view>
+            <view class="address-edit">
+                <view style="max-width: 96%;">{{item.address}}</view>
+                <text data-id="{{item.id}}" catchtap ="editTap" class="iconfont icon-xiugai1"></text>
+            </view>
+            <view class="operate">
+                <view style="display: flex;align-items: center;">
+                    <text class="default" wx:if="{{item.isdefault =='是' }}">默认</text>
+                </view>
+                <!-- 13826651912 -->
+                <text data-id="{{item.id}}" catchtap="delTap" class="iconfont icon-shanchu1  "></text>
+            </view>
+        </view>
+        <view wx:if="{{addressList.length==0}}" class="nodata">
+            <view style="color:rgb(183, 183, 183)" bind:tap="addressTap">暂无地址~</view>
+        </view>
+        <button style="margin-top: 88rpx;" type="warn" bind:tap="addTap">新增</button>
+
+    </view>
+</view>

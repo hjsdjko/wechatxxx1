@@ -1,0 +1,30 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">课程分类</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.kechengfenlei==true}}"  placeholder="课程分类" model:value="{{kechengfenlei}}" />
+    </view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

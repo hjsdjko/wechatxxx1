@@ -1,0 +1,88 @@
+.forgot-container {
+min-height
+:100vh;
+width
+:100%;
+padding
+:224rpx 44rpx 244rpx 44rpx;
+background
+:url(http://clfile.zggen.cn/20231027/1c74fe0f859b421da2ff00db828f3937.jpg) no-repeat center top / 100%,#6185fd;
+height
+:100%;
+}
+
+.forgot-content {
+max-width: calc(100% - 23%);
+overflow: hidden;
+padding
+:100rpx 48rpx 40rpx 48rpx;
+box-shadow
+:0px 0px 0px #dddddd;
+border-radius
+:24rpx;
+background
+:#ffffff;
+display
+:block;
+width
+:100%;
+position
+:relative;
+height
+:auto;
+}
+.box{
+width: 90%!important;
+    width
+:100%;
+    margin
+:0 0 24rpx 0;
+    height
+:auto;
+}
+input{
+border
+:2rpx solid #eeeeee;
+padding
+:0px 24rpx 0 24rpx;
+margin
+:0 0 0 0;
+color
+:#666666;
+border-radius
+:40rpx;
+background
+:#ffffff;
+width
+:100%;
+font-size
+:28rpx;
+height
+:80rpx;
+}
+
+
+
+.next-btn {
+    border
+:0px solid #eee;
+    padding
+:0 0 0 0;
+    margin
+:0 0 24rpx 0;
+    color
+:#ffffff;
+    border-radius
+:60rpx;
+    background
+:url(http://clfile.zggen.cn/20231027/6e8b0d771019408d8e99fb9a88018f81.png) no-repeat center top / 100%;
+    width
+:100%;
+    line-height
+:80rpx;
+    font-size
+:32rpx;
+    height
+:80rpx;
+}
+

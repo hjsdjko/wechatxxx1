@@ -1,0 +1,55 @@
+.address-container {
+width: 100vw;
+letter-spacing: 2rpx;
+font-size: 28rpx;
+height: 100vh;
+background-color: rgb(247, 247, 247);
+}
+
+.cofrim,
+.cancel {
+width: 40vw;
+background-color: rgb(7, 180, 123);
+color: white;
+
+}
+
+.operate {
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+.content {
+padding: 20rpx;
+}
+
+.address {
+width: inherit;
+display: flex;
+flex-direction: column;
+padding: 20rpx;
+justify-content: space-between;
+background-color: #ffffff;
+}
+
+.default {
+border: 2rpx solid red;
+color: red;
+margin-right: 5rpx;
+border-radius: 10rpx;
+padding: 2rpx;
+}
+
+.operate,
+.address-edit {
+display: flex;
+margin: 10rpx 0;
+justify-content: space-between;
+}
+
+.nodata {
+display: flex;
+margin-top: 88rpx;
+justify-content: center;
+}

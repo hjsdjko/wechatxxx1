@@ -1,0 +1,121 @@
+<view class="index-container">
+    <view class="content">
+
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#6484ff30'   indicator-active-color="#6484ff"   autoplay="{{true}}"  circular="{{true}}">
+        <swiper-item class="swiper-item"  wx:for="{{swiperList}}" wx:if="{{index<=2}}" wx:key="{{index}}"       >
+            <image src="{{item.img}}" mode="aspectFill"   class="swiper-img"></image>
+            <view   wx:if="true"  class="swiper-title">{{item.title}}</view>
+        </swiper-item>
+    </swiper>
+
+<!-- 菜单栏menu -->
+
+
+        <view wx:if="{{true}}"   class="grid-box">
+
+            <view wx:for="{{frontMenuList}}" wx:key="index" class="grid-box-item">
+                <view wx:if="{{item.child.length >1}}" data-item="{{item}}" bind:tap="selectTap">
+                    <text class="iconfont {{item.fontClass}} grid-icon" />
+                    <text class="item-munu">{{item.menu}}</text>
+                </view>
+
+                <view wx:else="" data-item="{{item}}" bind:tap="menuTap">
+                    <text class="iconfont {{item.fontClass}} grid-icon" />
+                    <text class="item-munu">{{item.menu}}</text>
+                </view>
+
+            </view>
+
+            <com-popup id="bottomFrame" className="buttom-popup">
+                <view bind:tap="cancelShow" style="display: flex;justify-content: flex-end;margin:20rpx 40rpx 0 0;">取消</view>
+                <view data-myitem="{{myitem}}" bind:tap="tomenuTap" wx:for="{{childItem}}" wx:for-item="myitem" wx:for-index="childindex" style="height: 100%;height: 88rpx;margin:20rpx 0;text-align: center;line-height: 88rpx;border-width: 0 0 2rpx 0;border-style: solid;border-color: #eee;" wx:key="{{childindex}}">
+                    {{myitem.menu}}
+                </view>
+
+
+            </com-popup>
+
+
+
+        </view>
+
+
+<!-- 商品推荐 -->
+    <!-- 商品推荐 -->
+<view class="recommend-max-box">
+    <view class="title">
+        <text class="title-text">课程信息推荐</text>
+    </view>
+    <view class="recommend-list-one-box">
+<view class="recommend-one-item-box"
+      catchtap="toDetail" data-tablename="kechengxinxi" data-item="{{item}}"   wx:for="{{kechengxinxiList}}"  wx:key="index">
+    <image  src="{{item.kechengfengmian}}" mode="aspectFill" class="recommend-img-one"/>
+<view  class="recommend-title-one" >{{item.kechengmingcheng}}</view>
+<view  class="recommend-title-one" >上课时间:{{item.shangkeshijian}}</view>
+<view  class="recommend-title-one" >教练姓名:{{item.jiaolianxingming}}</view>
+
+</view>
+</view>
+
+</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 新闻资讯 -->
+<view wx:if="{{false && 3 == 3}}" class="idea newsIdea" >
+<view  class="news-box1">走的够远，才懂得前方依旧长路漫漫</view>
+<view  class="news-box2"></view>
+<view class="news-box3"></view>
+<view  class="news-box4"></view>
+</view>
+<view class="news-box">
+
+
+    <view class="news-title-box">
+        <view class="news-title-text">公告信息</view>
+        <text class="news-title-more" bind:tap="toNewsList">更多</text>
+    </view>
+    <!--  默认样式1ok,2ok,3ok,4ok-->
+<view class="news-list-box">
+<view class="news-list-item" wx:for="{{newsList}}" bind:tap="toNewsDetail" data-id="{{item.id}}" wx:key="index">
+    <image   class="list-item-image" src="{{baseURL+'/'+item.picture}}" mode="aspectFill"></image>
+<view class="list-item-body" >
+<view class="list-item-title">{{item.title}}</view>
+<view class="list-item-introduction">{{item.introduction}}</view>
+<view class="list-item-text">{{item.addtime}}</view>
+</view>
+
+</view>
+</view>
+
+
+<!--  默认样式5ok-->
+
+<!--  默认样式6ok-->
+
+    <!--  默认样式7ok-->
+
+
+
+    <!--  默认样式8ok-->
+
+
+
+</view>
+
+    
+
+
+
+    </view>
+</view>

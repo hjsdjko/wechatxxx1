@@ -1,0 +1,94 @@
+.address-container {
+width: 100vw;
+letter-spacing: 2rpx;
+font-size: 28rpx;
+height: 100vh;
+background-color: rgb(247, 247, 247);
+letter-spacing: 2rpx;
+}
+
+.map-show {
+width: 100%;
+min-height: 50vh;
+/* background-color: pink; */
+}
+
+.operate {
+display: flex;
+font-size: 28rpx;
+}
+
+.cofrim,
+.cancel {
+width: 30vw;
+color: white;
+background-color: rgb(7, 180, 123);
+}
+
+.search {
+border: 2rpx solid rgb(212, 208, 208);
+margin: 20rpx;
+padding: 10rpx;
+border-radius: 20rpx;
+font-size: 24rpx;
+}
+
+.title {
+padding-left: 20rpx;
+margin: 10rpx;
+padding: 10rpx;
+}
+
+.title:hover {
+color: rgb(30, 128, 255) !important;
+}
+
+
+
+.content {
+padding: 20rpx;
+}
+
+.name,
+.code,
+.option-address,
+.detail-address,
+.address-label,
+.default-btn {
+width: inherit;
+padding: 20rpx;
+background-color: #ffffff;
+margin-bottom: 20rpx;
+}
+
+.radio-cla {
+margin: 0 20rpx;
+}
+
+.code input,
+.name input {
+padding-left: 10rpx;
+}
+
+.default-btn,
+.name,
+.code {
+display: flex;
+}
+
+
+
+.save {
+background-color: rgb(7, 180, 123);
+color: white;
+letter-spacing: 4rpx;
+}
+
+.detail-address {
+display: flex;
+}
+
+.option-address {
+display: flex;
+justify-content: space-between;
+}

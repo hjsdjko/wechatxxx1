@@ -1,0 +1,147 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" interval="{{5000}}" class="swiper" vertical="{{false}}" interval="{{5000}}" duration="{{500}}"  indicator-color='#6484ff30'   indicator-active-color="#6484ff"   autoplay="{{true}}"  circular="{{true}}">
+<swiper-item class="swiper-item"  wx:for="{{picture}}"   wx:key="{{index}}">
+    <image src="{{baseURL+item}}" mode="aspectFit"   class="swiper-img"></image>
+    <view   wx:if="$conf.menu.flag"  class="swiper-title">{{item.title}}</view>
+</swiper-item>
+</swiper>
+
+
+
+
+
+
+
+
+
+
+<view class="detail-box">
+
+<view class="price-box">
+<view  wx:if="{{islike}}" class="iconfont icon-likefill1  storeUp"  bind:tap="cancelLikeTap"></view>
+<view wx:else="" class="iconfont   icon-likeline1 cancel-storeUp"   bind:tap="likeTap"></view>
+</view>
+
+<view class="detail-item-box" >
+<view class="detail-item-label">课程名称：</view>
+<view class="detail-item-text">{{detailList.kechengmingcheng}}</view>
+</view>
+<view class="detail-detail-img-box">
+<view class="detail-item-label">课程封面：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.kechengfengmian}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">课程分类：</view>
+<view class="detail-item-text">{{detailList.kechengfenlei}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">上课时间：</view>
+<view class="detail-item-text">{{detailList.addtime}}</view>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">上课地点：</view>
+<view class="detail-item-text">{{detailList.shangkedidian}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">课程价格：</view>
+<view class="detail-item-text">{{detailList.kechengjiage}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">教练账号：</view>
+<view class="detail-item-text">{{detailList.jiaolianzhanghao}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">教练姓名：</view>
+<view class="detail-item-text">{{detailList.jiaolianxingming}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">收藏数量：</view>
+<view class="detail-item-text">{{detailList.storeupnum}}</view>
+</view>
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">最近点击时间：</view>
+<view class="detail-item-text">{{detailList.addtime}}</view>
+</view>
+
+
+
+<view class="video-box">
+<video  class="video-default" id="myVideo" src="{{baseURL+detailList.kechengshipin}}"></video>
+</view>
+
+<view class="detail-item-box">
+<view class="detail-item-label">课程简介</view>
+<view class="detail-item-text">{{detailList.kechengjianjie}}</view>
+</view>
+
+
+
+
+
+<view class="commment-box">
+<view class="commment-header">
+<view class="commment-title">评论</view>
+<view class="comment-add-box" bind:tap="addCommentap">
+            <view class="comment-add-icon" class="iconfont icon-xinzeng5"></view>
+    <view class="comment-add-text">添加评论</view>
+</view>
+</view>
+<view class="commment-item" wx:for="{{commmentList}}" wx:key="index">
+<view class="comment-item-user">
+    <image class="item-avatar" src="{{baseURL+item.avatarurl}}" mode="aspectFit" />
+    <view class="item-nickname">{{item.nickname}}</view>
+</view>
+<view :style='{"margin":"8rpx 0 8rpx 0","lineHeight":"48rpx","fontSize":"28rpx","color":"#666666","textIndent":"2em"}' class="text-gray text-content text-df">
+    </view>
+<view class="commment-item-box">
+    <rich-text nodes="{{item.content}}" />
+</view>
+<view class="commment-time">{{item.addtime}}</view>
+</view>
+</view>
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+<button  class="common-btn"  wx:if="{{kechengyuyueShow}}"
+     data-info="kechengyuyue,'','[1]','请勿重复操作'" bind:tap="onAcrossTap" >
+课程预约
+</button>
+    <button  class="common-btn"  wx:if="{{!kechengyuyueShow}}"
+             data-info="kechengyuyue,'','[1]','请勿重复操作'" bind:tap="onAcrossTap" >
+        课程预约
+    </button>
+
+
+
+
+
+</view>
+
+</view>
+</view>

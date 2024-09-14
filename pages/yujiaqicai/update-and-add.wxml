@@ -1,0 +1,59 @@
+
+<view class="update-container">
+ <view class="content">
+     <view class="form-box">
+    <view class="item-box">
+        <view class="item-label">器材编号</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qicaibianhao==true}}"  placeholder="器材编号" model:value="{{qicaibianhao}}" />
+    </view>
+
+    <view class="item-box">
+        <view class="item-label">器材名称</view>
+        <input  class="item-input"
+
+
+
+
+
+
+                type="text"  disabled="{{ro.qicaimingcheng==true}}"  placeholder="器材名称" model:value="{{qicaimingcheng}}" />
+    </view>
+
+<view class="item-box"    bindtap="uploadqicaitupian">
+    <view   class="item-label">器材图片</view>
+    <image  src="{{qicaitupianPath}}" mode="aspectFill"  class="item-img"></image>
+</view>
+    <com-edit></com-edit>
+<view class="item-box"  >
+    <view class="item-label">使用方法</view>
+
+    <textarea model:value="{{shiyongfangfa}}" placeholder="使用方法"     data-info="{{shiyongfangfa}}" maxlength="300" id="shiyongfangfa"></textarea>
+</view>
+
+<view class="item-box"  >
+    <view class="item-label">使用效果</view>
+
+    <textarea model:value="{{shiyongxiaoguo}}" placeholder="使用效果"     data-info="{{shiyongxiaoguo}}" maxlength="300" id="shiyongxiaoguo"></textarea>
+</view>
+
+     </view>
+
+
+     <view class="btn-box">
+
+
+
+  <button     class="submit-btn" bindtap="submit">提交</button>
+     </view>
+
+
+    </view>
+
+</view>

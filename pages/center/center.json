@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "tree-menu": "/component/tree-menu/tree-menu",
+    "com-popup": "/component/com-popup/com-popup"
+  },
+  "navigationBarTitleText": "我的",
+  "navigationBarBackgroundColor":"#FFFFFF",
+  "navigationBarTextStyle": "black"
+}

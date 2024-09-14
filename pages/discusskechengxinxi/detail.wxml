@@ -1,0 +1,89 @@
+<view class="detail-container">
+<view class="content"   bind:tap="authTap">
+
+
+
+
+
+
+<view class="detail-box">
+
+
+<view class="detail-item-box" >
+<view class="detail-item-label">关联表id：</view>
+<view class="detail-item-text">{{detailList.refid}}</view>
+</view>
+
+
+<view class="detail-detail-img-box">
+<view class="detail-item-label">头像：</view>
+<image class="detail-detail-img-img" wx:if="{{detailList.avatarurl}}"  src="{{baseURL+picture[0]}}"></image>
+</view>
+<view class="detail-item-box" >
+<view class="detail-item-label">用户名：</view>
+<view class="detail-item-text">{{detailList.nickname}}</view>
+</view>
+
+
+
+
+
+
+<view class="detail-item-box">
+<view class="detail-item-label">评论内容</view>
+<view class="detail-item-text">{{detailList.content}}</view>
+</view>
+<view class="detail-item-box">
+<view class="detail-item-label">回复内容</view>
+<view class="detail-item-text">{{detailList.reply}}</view>
+</view>
+
+
+
+
+
+<view class="commment-box">
+<view class="commment-header">
+<view class="commment-title">评论</view>
+<view class="comment-add-box" bind:tap="addCommentap">
+            <view class="comment-add-icon" class="iconfont icon-xinzeng5"></view>
+    <view class="comment-add-text">添加评论</view>
+</view>
+</view>
+<view class="commment-item" wx:for="{{commmentList}}" wx:key="index">
+<view class="comment-item-user">
+    <image class="item-avatar" src="{{baseURL+item.avatarurl}}" mode="aspectFit" />
+    <view class="item-nickname">{{item.nickname}}</view>
+</view>
+<view :style='{"margin":"8rpx 0 8rpx 0","lineHeight":"48rpx","fontSize":"28rpx","color":"#666666","textIndent":"2em"}' class="text-gray text-content text-df">
+    </view>
+<view class="commment-item-box">
+    <rich-text nodes="{{item.content}}" />
+</view>
+<view class="commment-time">{{item.addtime}}</view>
+</view>
+</view>
+
+
+
+
+</view>
+
+
+
+
+
+
+
+
+<view class="operate-box">
+
+<button      bind:tap="addCart"  class="addCart">加入购物车</button>
+
+
+
+
+</view>
+
+</view>
+</view>
